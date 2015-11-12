@@ -47,8 +47,10 @@
             </paper-toolbar>
 
             <div class="container layout vertical center">
-                <cat-service></cat-service>
-                <cat-list></cat-list>
+                <template is="dom-bind">
+                    <cat-service cats="{{cats}}"></cat-service>
+                    <cat-list cats="{{cats}}"></cat-list>
+                </template>
             </div>
         </paper-header-panel>
 

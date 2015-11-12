@@ -15,24 +15,9 @@
         Polymer({
             is: 'cat-list',
             properties: {
-                cats: {
-                    type: Array,
-                    value: [
-                        {
-                            "image": "../images/cat.1.jpg",
-                            "favorite": false
-                        },
-                        {
-                            "image": "../images/cat.2.jpg",
-                            "favorite": true
-                        },
-                        {
-                            "image": "../images/cat.3.jpg",
-                            "favorite": false
-                        }
-                    ]
-                }
-            }
+                show: String,
+                cats: Array
+            },
         });
     </script>
 </dom-module>
