@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="cat-service">
+    <template>
+        <iron-ajax
+          auto
+          url="/data/cats.json"
+          last-response="{{cats}}"></iron-ajax>
+    </template>
+    <script>
+        Polymer({
+            is: "cat-service",
+            properties: {
+                cats: {
+                    type: Array,
+                    notify: true
+                }
+            }
+        });
+    </script>
+</dom-module>
