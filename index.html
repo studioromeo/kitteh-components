@@ -49,14 +49,14 @@
             <div class="container layout vertical center">
                 <template is="dom-bind">
                     <cat-service cats="{{cats}}"></cat-service>
-                    <cat-list cats="{{cats}}"></cat-list>
+                    <cat-list cats="{{cats}}" show="favourites"></cat-list>
                 </template>
             </div>
         </paper-header-panel>
 
         <script>
             var tabs = document.querySelector('paper-tabs');
-                list = document.querySelector('post-list');
+                list = document.querySelector('cat-list');
 
             tabs.addEventListener('iron-select', function() {
                 console.log(tabs.selected);

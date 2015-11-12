@@ -5,7 +5,9 @@
     <template>
         <div class="layout vertical center">
             <template is="dom-repeat" items="{{cats}}" as="cat">
-                <cat-card favorite="{{cat.favorite}}">
+                <cat-card
+                    favorite="{{cat.favorite}}"
+                    hidden$="[[_computeHidden(show, cat)]]">
                     <img src="{{cat.image}}" />
                 </cat-card>
             </template>
@@ -18,6 +20,9 @@
                 show: String,
                 cats: Array
             },
+            _computeHidden: function(show, cat) {
+                return show == 'favourites' && !cat.favorite;
+            }
         });
     </script>
 </dom-module>
