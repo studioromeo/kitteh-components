@@ -1,4 +1,9 @@
 {
-    "name": "kitteh",
-    "version": "0.0.0"
+  "name": "kitteh",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer": "~1.2.1",
+    "iron-elements": "~1.0.4",
+    "paper-elements": "~1.0.6"
+  }
 }

@@ -1,0 +1,30 @@
+[
+    {
+        "image": "../images/cat.1.jpg",
+        "favourites": "0"
+    },
+    {
+        "image": "../images/cat.2.jpg",
+        "favourites": "0"
+    },
+    {
+        "image": "../images/cat.3.jpg",
+        "favourites": "0"
+    },
+    {
+        "image": "../images/cat.4.jpg",
+        "favourites": "0"
+    },
+    {
+        "image": "../images/cat.5.jpg",
+        "favourites": "0"
+    },
+    {
+        "image": "../images/cat.6.jpg",
+        "favourites": "0"
+    },
+    {
+        "image": "../images/cat.7.jpg",
+        "favourites": "0"
+    }
+]

@@ -3,8 +3,59 @@
     <head>
         <meta charset="utf-8">
         <title>Kitteh</title>
+
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+        <!-- Font -->
+        <link rel="import" href="../bower_components/font-roboto/roboto.html" />
+
+        <!-- Flexbox helpers -->
+        <link rel="import" href="../bower_components/iron-flex-layout/classes/iron-flex-layout.html" />
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html" />
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html" />
+        <link rel="import" href="bower_components/paper-tabs/paper-tabs.html" />
+        <link rel="import" href="bower_components/paper-tabs/paper-tab.html" />
+
+        <!-- <link rel="import" href="elements/card/card.html"> -->
+
+        <style>
+            body {
+                margin: 0;
+                background-color: #E5E5E5;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            paper-tabs {
+                width: 100%;
+            }
+
+            .container {
+                width: 80%;
+                margin: 50px auto;
+            }
+        </style>
+
     </head>
-    <body>
-        Kitteh
+    <body class="fullbleed layout vertical">
+        <paper-header-panel class="flex">
+            <paper-toolbar>
+                <paper-tabs class="fit horizontal layout" attr-for-selected="name" selected="all">
+                    <paper-tab name="all">All</paper-tab>
+                    <paper-tab name="favourites">Favourites</paper-tab>
+                </paper-tabs>
+            </paper-toolbar>
+            <div class="container layout vertical center">
+                Cats cats cats
+            </div>
+        </paper-header-panel>
+
+        <script>
+            var tabs = document.querySelector('paper-tabs');
+                list = document.querySelector('post-list');
+
+            tabs.addEventListener('iron-select', function() {
+                console.log(tabs.selected);
+            });
+        </script>
     </body>
 </html>
