@@ -4,9 +4,11 @@
 <dom-module id="cat-list">
     <template>
         <div class="layout vertical center">
-            <cat-card>
-                <img src="../images/cat.1.jpg" />
-            </cat-card>
+            <template is="dom-repeat" items="{{cats}}" as="cat">
+                <cat-card favorite="{{cat.favorite}}">
+                    <img src="{{cat.image}}" />
+                </cat-card>
+            </template>
         </div>
     </template>
     <script>
