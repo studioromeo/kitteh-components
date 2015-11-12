@@ -16,7 +16,7 @@
         <link rel="import" href="bower_components/paper-tabs/paper-tabs.html" />
         <link rel="import" href="bower_components/paper-tabs/paper-tab.html" />
 
-        <!-- <link rel="import" href="elements/card/card.html"> -->
+        <link rel="import" href="elements/cat-card.html">
 
         <style>
             body {
@@ -44,9 +44,13 @@
                     <paper-tab name="favourites">Favourites</paper-tab>
                 </paper-tabs>
             </paper-toolbar>
+
             <div class="container layout vertical center">
-                Cats cats cats
+                <cat-card>
+                    <img src="images/cat.1.jpg" />
+                </cat-card>
             </div>
+
         </paper-header-panel>
 
         <script>
