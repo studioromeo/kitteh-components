@@ -23,6 +23,10 @@
                 color: #636363;
                 --paper-icon-button-ink-color: #da4336;
             }
+
+            :host[favorite] paper-icon-button {
+              color: #da4336;
+            }
         </style>
 
         <div class="layout horizontal center">
@@ -30,12 +34,24 @@
         </div>
         <paper-icon-button
             id="favicon"
-            icon="favorite">
+            icon="favorite"
+            on-tap="favoriteTapped">
         </paper-icon-button>
     </template>
     <script>
         Polymer({
-            is: 'cat-card'
+            is: 'cat-card',
+            properties: {
+                favorite: {
+                    notify: true,
+                    value: false,
+                    reflectToAttribute: true
+                }
+            },
+            favoriteTapped: function(event, detail, sender) {
+                this.favorite = !this.favorite;
+                this.fire('favorite-tap');
+            }
         });
     </script>
 </dom-module>
