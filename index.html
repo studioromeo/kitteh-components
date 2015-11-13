@@ -38,29 +38,24 @@
 
     </head>
     <body class="fullbleed layout vertical">
-        <paper-header-panel class="flex">
-            <paper-toolbar>
-                <paper-tabs class="fit horizontal layout" attr-for-selected="name" selected="all">
-                    <paper-tab name="all">All</paper-tab>
-                    <paper-tab name="favourites">Favourites</paper-tab>
-                </paper-tabs>
-            </paper-toolbar>
+        <template is="dom-bind">
+            <paper-header-panel class="flex">
+                <paper-toolbar>
+                    <paper-tabs class="fit horizontal layout" attr-for-selected="name" selected="{{selected}}">
+                        <paper-tab name="all">All</paper-tab>
+                        <paper-tab name="favourites">Favourites</paper-tab>
+                    </paper-tabs>
+                </paper-toolbar>
 
-            <div class="container layout vertical center">
-                <template is="dom-bind">
+                <div class="container layout vertical center">
                     <cat-service cats="{{cats}}"></cat-service>
-                    <cat-list cats="{{cats}}" show="favourites"></cat-list>
-                </template>
-            </div>
-        </paper-header-panel>
-
-        <script>
-            var tabs = document.querySelector('paper-tabs');
-                list = document.querySelector('cat-list');
-
-            tabs.addEventListener('iron-select', function() {
-                console.log(tabs.selected);
-            });
-        </script>
+                    <cat-list cats="{{cats}}" show="{{selected}}"></cat-list>
+                </div>
+            </paper-header-panel>
+            <script>
+                var tabs = document.querySelector('paper-tabs');
+                tabs.selected = 'all';
+            </script>
+        </template>
     </body>
 </html>
